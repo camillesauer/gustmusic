@@ -1,3 +1,95 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.banner {
+  background-size: cover;
+  height: 60vh;
+  background-position: center;
+  padding: 100px 0 50px 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.banner img {
+  width: 50%;
+  height: 150px;
+  align-item: center;
+  object-fit: contain;
+  margin-bottom: 50px;
+}
+
+h1{
+   font-family: 'Archivo', sans-serif;
+  font-size: 25px;
+}
+
+p{
+font-family: 'Raleway', sans-serif;
+font-size: 15px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 25px;
+  left: 16px;
+}
+
+.bottom-left-subtitle {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .card{
+  display:grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .card{
+  display:grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .card{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .card{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .card{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');

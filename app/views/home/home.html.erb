@@ -1,1 +1,27 @@
-home.html.erb
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= asset_path 'ban.jpg'%>)">
+  <%=  image_tag("logoblanc.png", alt: "Gust - all rights reserved.") %>
+<div>
+  <%=  link_to(image_tag("soundcloud.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
+  <%=  link_to(image_tag("Youtube.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
+  <%=  link_to(image_tag("spotify.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
+  <%=  link_to(image_tag("instagram.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
+</div>
+</div>
+<div class="card" >
+  <div class="container">
+    <h1 class="bottom-left">title</h1>
+    <p class="bottom-left-subtitle"><strong>Gust</strong></p>
+    <%= link_to(image_tag("card.jpg", alt: "Gust - all rights reserved.", crop: "fill", style: 'height:300px;width:150;margin:10px 10px 10px 0px;box-shadow: 0 0 15px rgba(0,0,0,0.2);'), beat_path) %>
+  </div>
+   <div class="container">
+    <h1 class="bottom-left">title</h1>
+    <p class="bottom-left-subtitle"><strong>Gust</strong></p>
+    <%= link_to(image_tag("card2.jpg", alt: "Gust - all rights reserved.", crop: "fill", style: 'height:300px;width:150;margin:10px 10px 10px 10px;box-shadow: 0 0 15px rgba(0,0,0,0.2);'), composition_path) %>
+  </div>
+  <div class="container">
+    <h1 class="bottom-left">title</h1>
+    <p class="bottom-left-subtitle"><strong>Gust</strong></p>
+    <%= link_to(image_tag("card.jpg", alt: "Gust - all rights reserved.", style: 'height:300px;width:150;margin:10px 0px 10px 10px;box-shadow: 0 0 15px rgba(0,0,0,0.2);'), rap_path) %>
+  </div>
+</div>
+
