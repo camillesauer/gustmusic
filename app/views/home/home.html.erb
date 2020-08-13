@@ -14,7 +14,7 @@
   <div class="carousel-inner" role="listbox">
     <!--First slide-->
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+      <img class="d-block w-100 carousel-resp" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
         alt="First slide">
     </div>
     <!--/First slide-->
@@ -42,29 +42,23 @@
     <span class="sr-only">Next</span>
   </a>
   <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->
-  <%=  link_to(image_tag("soundcloud.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
-  <%=  link_to(image_tag("Youtube.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
-  <%=  link_to(image_tag("spotify.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
-  <%=  link_to(image_tag("instagram.png", alt: "Gust - all rights reserved.", style: 'height:50px;width:50px;margin:10px;')) %>
-</div>
-</div>
-<div class="card" >
-  <div class="container">
-    <h1 class="bottom-left">title</h1>
-    <p class="bottom-left-subtitle"><strong>Gust</strong></p>
-    <%= link_to(image_tag("card.jpg", alt: "Gust - all rights reserved.", crop: "fill", style: 'height:300px;width:150;margin:10px 10px 10px 0px;box-shadow: 0 0 15px rgba(0,0,0,0.2);'), beats_path) %>
-  </div>
-   <div class="container">
-    <h1 class="bottom-left">title</h1>
-    <p class="bottom-left-subtitle"><strong>Gust</strong></p>
-    <%= link_to(image_tag("card2.jpg", alt: "Gust - all rights reserved.", crop: "fill", style: 'height:300px;width:150;margin:10px 10px 10px 10px;box-shadow: 0 0 15px rgba(0,0,0,0.2);'), compositions_path) %>
-  </div>
-  <div class="container">
-    <h1 class="bottom-left">title</h1>
-    <p class="bottom-left-subtitle"><strong>Gust</strong></p>
-    <%= link_to(image_tag("card.jpg", alt: "Gust - all rights reserved.", style: 'height:300px;width:150;margin:10px 0px 10px 10px;box-shadow: 0 0 15px rgba(0,0,0,0.2);'), raps_path) %>
-  </div>
-</div>
 
+</div>
+<div>
+<div class="mosaic" >
+  <div class="card-image">
+    <h1 class="bottom-left">BEATS</h1>
+    <div class="img-home"><%= link_to(image_tag("card.jpg", alt: "Gust - all rights reserved."), beats_path) %>
+  </div>
+  </div>
+   <div class="card-image">
+    <h1 class="bottom-left">COMPOSITION</h1>
+    <div class="img-home"><%= link_to(image_tag("card2.jpg", alt: "Gust - all rights reserved."), compositions_path) %></div>
+  </div>
+  <div class="card-image">
+    <h1 class="bottom-left">RAP</h1>
+    <div class="img-home"><%= link_to(image_tag("card.jpg", alt: "Gust - all rights reserved."), raps_path) %></div>
+  </div>
+
+</div>
+<%= render "components/footer" %>
