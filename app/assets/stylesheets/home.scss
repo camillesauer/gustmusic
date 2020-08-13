@@ -68,7 +68,7 @@ font-size: 15px;
 @media (min-width: 768px) {
   .card{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
 }
 }
