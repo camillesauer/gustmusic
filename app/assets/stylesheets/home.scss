@@ -212,7 +212,7 @@
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 320px !important;
   object-fit:cover !important;
 }
 }
@@ -222,7 +222,7 @@
 @media (min-width: 1000px) {
 .bottom-left{
   font-family: 'Oswald', sans-serif !important;
-  font-size: 50px !important;
+  font-size: 40px !important;
 }
 }
 
@@ -239,7 +239,7 @@
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 340px !important;
   object-fit:cover !important;
 }
 }
@@ -247,7 +247,7 @@
 @media (min-width: 1100px) {
 .bottom-left{
   font-family: 'Oswald', sans-serif !important;
-  font-size: 50px !important;
+  font-size: 40px !important;
 }
 }
 
@@ -264,7 +264,7 @@
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 380px !important;
   object-fit:cover !important;
 }
 }
@@ -272,7 +272,7 @@
 @media (min-width: 1200px) {
 .bottom-left{
   font-family: 'Oswald', sans-serif !important;
-  font-size: 50px !important;
+  font-size: 40px !important;
   margin-left: 20px;
 }
 }
@@ -290,7 +290,7 @@
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 400px !important;
   object-fit:cover !important;
 }
 }
@@ -298,17 +298,26 @@
 @media (min-width: 1300px) {
 .bottom-left{
   font-family: 'Oswald', sans-serif !important;
-  font-size: 60px !important;
+  font-size: 40px !important;
   margin-left: 20px;
 }
 }
 
 
 @media (min-width: 1400px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
+}
+}
+
+@media (min-width: 1400px) {
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 420px !important;
   object-fit:cover !important;
 }
 }
@@ -316,8 +325,17 @@
 @media screen and (min-width: 1400px) {
 .bottom-left{
   font-family: 'Oswald', sans-serif !important;
-  font-size: 60px !important;
+  font-size: 50px !important;
   margin-left: 20px;
+}
+}
+
+@media (min-width: 1500px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
 }
 }
 
@@ -326,7 +344,7 @@
 .img-home img{
  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 480px !important;
   object-fit:cover !important;
 }
 }
@@ -334,8 +352,17 @@
 @media (min-width: 1500px) {
 .bottom-left{
   font-family: 'Oswald', sans-serif !important;
-  font-size: 60px !important;
+  font-size: 50px !important;
   margin-left: 20px;
+}
+}
+
+@media (min-width: 1600px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
 }
 }
 
@@ -344,7 +371,7 @@
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 330px !important;
+  width: 500px !important;
   object-fit:cover !important;
 }
 }
@@ -357,12 +384,21 @@
 }
 }
 
+@media (min-width: 1700px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
+}
+}
+
 
 @media (min-width: 1700px) {
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 400px !important;
+  width: 500px !important;
   object-fit:cover !important;
 }
 }
@@ -372,6 +408,15 @@
   font-family: 'Oswald', sans-serif !important;
   font-size: 60px !important;
   margin-left: 20px;
+}
+}
+
+@media (min-width: 1800px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
 }
 }
 
@@ -380,7 +425,7 @@
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 400px !important;
+  width: 500px !important;
   object-fit:cover !important;
 }
 }
@@ -393,12 +438,21 @@
 }
 }
 
+@media (min-width: 1900px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
+}
+}
+
 
 @media (min-width: 1900px) {
 .img-home img{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 200px !important;
-  width: 400px !important;
+  width: 500px !important;
   object-fit:cover !important;
 }
 }
@@ -408,6 +462,15 @@
   font-family: 'Oswald', sans-serif !important;
   font-size: 60px !important;
   margin-left: 20px;
+}
+}
+
+@media (min-width: 2000px) {
+  .mosaic{
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+
 }
 }
 
