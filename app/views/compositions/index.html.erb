@@ -1,5 +1,6 @@
 <%= render "components/menu" %>
 <!--Carousel Wrapper-->
+<div class="img-back"><%= link_to(image_tag("button.png", alt: "Gust - all rights reserved."), root_path) %></div>
 <div id="carousel-example-1z" class="carousel slide carousel-fade carousel-bottom" data-ride="carousel">
   <!--Indicators-->
   <ol class="carousel-indicators">
@@ -41,61 +42,35 @@
   </a>
   <!--/.Controls-->
 </div>
+<% if user_signed_in? %>
+<%= link_to "Add", new_composition_path %>
+<% end %>
 <!--/.Carousel Wrapper-->
-<div class="video-bottom">
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
 </div>
+
+<div>
+<div class="video-mobile video-ipad video-medium video-desktop">
+    <% @compositions.each do |composition| %>
+    <div class ="card-video">
+      <div class ="card-item">
+        <% if user_signed_in? %>
+        <%= link_to 'Destroy', composition_path(composition),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+        <%= link_to "Edit", edit_composition_path(composition.id)%>
+        <% end %>
+      </div>
+      <div class="margin-video" >
+      <iframe width="320" height="240"
+        src= <%= composition.url %>
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
 <%= render "components/footer" %>
