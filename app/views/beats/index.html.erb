@@ -45,10 +45,9 @@
 <%= link_to "Add", new_beat_path %>
 <% end %>
 <!--/.Carousel Wrapper-->
-
 </div>
 
-  <div class="row">
+<div class="video-galery">
     <% @beats.each do |beat| %>
     <div class ="card-video">
       <div class ="card-item">
@@ -66,7 +65,7 @@
         allowfullscreen>
       </iframe>
     </div>
-      <% end %>
+    <% end %>
   </div>
 
 <%= render "components/footer" %>

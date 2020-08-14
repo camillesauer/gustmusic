@@ -26,18 +26,36 @@
   margin: 10px;
 }
 
+.video-galery{
+text-align: center !important;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.lock-item img{
+    width: 30px;
+}
+
 .card-video {
   display:flex;
   flex-direction:column;
-  padding: 20px;
-  background-color: red;
+  padding: 10px;
+  background-color: white;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: -2px 1px 9px 1px rgba(0,0,0,0.43);
 }
 
 .card-item{
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 20px !important;
   display:flex;
   justify-content: space-between;
+  margin-bottom:10px;
+}
+
+.card-item a{
+  color: red !important;
 }
 
 .card{
@@ -74,9 +92,6 @@
 
 }
 }
-
-
-
 
 @media screen and (min-width: 100px) {
 .img-home img{
