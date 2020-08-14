@@ -26,14 +26,15 @@
   margin: 10px;
 }
 
-.video-galery{
-text-align: center !important;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+
 
 .lock-item img{
     width: 30px;
+}
+
+.img-back img{
+width: 30px;
+margin-bottom: 20px;
 }
 
 .card-video {
@@ -43,7 +44,11 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: white;
   border-radius: 10px;
   margin: 20px;
-  box-shadow: -2px 1px 9px 1px rgba(0,0,0,0.43);
+
+}
+
+.margin-video{
+text-align: center !important;
 }
 
 .card-item{
@@ -520,6 +525,50 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-left: 20px;
 }
 }
+
+@media only screen and (max-width: 800px){
+.video-mobile{
+text-align: center !important;
+display: grid !important;
+grid-template-columns: 1fr;
+}}
+
+@media only screen and (max-width: 800px) {
+.video-ipad{
+  display: none;
+}}
+
+@media only screen and (min-width: 801px) {
+.video-mobile{
+  display: none;
+}}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+.video-ipad{
+text-align: center !important;
+display: grid !important;
+grid-template-columns: 1fr 1fr;
+}}
+
+@media only screen and (min-width: 1201px) and (max-width: 1900px) {
+.video-medium{
+text-align: center !important;
+display: grid !important;
+grid-template-columns: 1fr 1fr 1fr;
+}}
+
+@media only screen and (min-width: 1901px) {
+.video-medium{
+  display: none;
+}}
+
+@media only screen and (min-width: 1901px) {
+.video-desktop{
+text-align: center !important;
+display: grid !important;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+}}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
