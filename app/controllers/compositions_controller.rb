@@ -1,4 +1,5 @@
 class CompositionsController < ApplicationController
+   before_action :authenticate_user!,except:[:index]
     def index
    @compositions = Composition.all
   end
@@ -22,7 +23,7 @@ class CompositionsController < ApplicationController
     @composition = Composition.find(params[:id])
     @composition.update(composition_params)
     # no need for app/views/restaurants/update.html.erb
-    redirect_to composition_path(@beat)
+    redirect_to compositions_path(@composition)
   end
 
   def destroy
@@ -33,3 +34,4 @@ class CompositionsController < ApplicationController
     redirect_to compositions_path
   end
 end
+

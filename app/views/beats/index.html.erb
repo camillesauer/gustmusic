@@ -41,61 +41,32 @@
   </a>
   <!--/.Controls-->
 </div>
+<% if user_signed_in? %>
+<%= link_to "Add", new_beat_path %>
+<% end %>
 <!--/.Carousel Wrapper-->
-<div class="video-bottom">
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <iframe class="margin-video" width="320" height="240"
-      src="https://www.youtube.com/embed/8aBSW5vhM6w"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+
 </div>
+
+  <div class="row">
+    <% @beats.each do |beat| %>
+    <div class ="card-video">
+      <div class ="card-item">
+        <% if user_signed_in? %>
+        <%= link_to 'Destroy', beat_path(beat),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+        <%= link_to "Edit", edit_beat_path(beat.id)%>
+        <% end %>
+      </div>
+      <iframe class="margin-video" width="320" height="240"
+        src= <%= beat.url %>
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+      <% end %>
+  </div>
+
 <%= render "components/footer" %>

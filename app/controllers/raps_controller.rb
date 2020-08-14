@@ -1,4 +1,5 @@
 class RapsController < ApplicationController
+   before_action :authenticate_user!,except:[:index]
   def index
    @raps = Rap.all
   end
