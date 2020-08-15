@@ -112,10 +112,19 @@ text-align: center !important;
 
 
 @media (max-width: 320px) {
-  .menu{
-  margin-left: 20px;
+  .menu img{
+  width: 80px;
 }
 }
+
+@media (max-width: 320px) {
+.lock-item img {
+    width: 30px;
+}}
+
+
+
+
 
 @media (min-width: 100px) {
   .mosaic{
