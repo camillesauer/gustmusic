@@ -1,1 +1,4 @@
-edit.html.erb
+  <%= simple_form_for [ @composition ] do |f| %>
+    <%= f.input :url %>
+    <%= f.submit "Save changes", class: "btn btn-primary" %>
+  <% end %>

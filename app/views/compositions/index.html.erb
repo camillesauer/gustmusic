@@ -43,7 +43,7 @@
   <!--/.Controls-->
 </div>
 <% if user_signed_in? %>
-<%= link_to "Add", new_composition_path %>
+<div class="ajouter-btn"><%= link_to "Ajouter", new_composition_path %></div>
 <% end %>
 <!--/.Carousel Wrapper-->
 </div>
@@ -54,10 +54,10 @@
     <div class ="card-video">
       <div class ="card-item">
         <% if user_signed_in? %>
-        <%= link_to 'Destroy', composition_path(composition),
+        <%= link_to 'Supprimer', composition_path(composition),
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
-        <%= link_to "Edit", edit_composition_path(composition.id)%>
+        <%= link_to "Editer", edit_composition_path(composition.id)%>
         <% end %>
       </div>
       <div class="margin-video" >

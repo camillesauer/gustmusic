@@ -42,11 +42,13 @@
   </a>
   <!--/.Controls-->
 </div>
-<% if user_signed_in? %>
-<%= link_to "Add", new_rap_path %>
-<% end %>
-<!--/.Carousel Wrapper-->
 </div>
+
+<% if user_signed_in? %>
+ <div class="ajouter-btn"><%= link_to "Ajouter", new_rap_path %></div>
+<% end %>
+
+
 
 <div>
 <div class="video-mobile video-ipad video-medium video-desktop">
@@ -54,10 +56,10 @@
     <div class ="card-video">
       <div class ="card-item">
         <% if user_signed_in? %>
-        <%= link_to 'Destroy', rap_path(rap),
+        <%= link_to 'Supprimer', rap_path(rap),
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
-        <%= link_to "Edit", edit_rap_path(rap.id)%>
+        <%= link_to "Editer", edit_rap_path(rap.id)%>
         <% end %>
       </div>
       <div class="margin-video" >

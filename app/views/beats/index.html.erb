@@ -40,37 +40,40 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <!--/.Controls-->
-</div>
-<% if user_signed_in? %>
-<%= link_to "Add", new_beat_path %>
-<% end %>
-<!--/.Carousel Wrapper-->
+  </div>
 </div>
 
+
+  <% if user_signed_in? %>
+    <div class="ajouter-btn"><%= link_to "Ajouter", new_beat_path %></div>
+  <% end %>
+
+<!--/.Carousel Wrapper-->
+
+
 <div>
-<div class="video-mobile video-ipad video-medium video-desktop">
-    <% @beats.each do |beat| %>
-    <div class ="card-video">
-      <div class ="card-item">
-        <% if user_signed_in? %>
-        <%= link_to 'Destroy', beat_path(beat),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-        <%= link_to "Edit", edit_beat_path(beat.id)%>
-        <% end %>
+  <div class="video-mobile video-ipad video-medium video-desktop">
+      <% @beats.each do |beat| %>
+      <div class ="card-video">
+        <div class ="card-item">
+          <% if user_signed_in? %>
+          <%= link_to 'Supprimer', beat_path(beat),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+          <%= link_to "Editer", edit_beat_path(beat.id)%>
+          <% end %>
+        </div>
+          <div class="margin-video" >
+            <iframe width="320" height="240"
+              src= <%= beat.url %>
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
       </div>
-      <div class="margin-video" >
-      <iframe width="320" height="240"
-        src= <%= beat.url %>
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
 </div>
 
 <%= render "components/footer" %>

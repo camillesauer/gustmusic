@@ -6,6 +6,33 @@
     margin-top: 20px;
 }
 
+.display-bubble{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+}
+
+.title-new{
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 20px !important;
+}
+
+.title-btn-new{
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 15px !important;
+}
+
+
+.ajouter-btn a {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 20px !important;
+  color: red !important;
+}
+
 .bottom-left {
   position: absolute;
   bottom: 8px;
