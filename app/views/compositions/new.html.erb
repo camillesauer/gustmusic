@@ -1,6 +1,6 @@
-<div class="d-flex container justify-content-center">
-   <h3>Add</h3>
- </div>
+<div class="d-flex container justify-content-center display-bubble">
+   <h3 class="title-new">Ajouter une composition</h3>
+
 
     <%= simple_form_for(@composition) do |f| %>
          <%= f.error_notification %>
@@ -12,6 +12,7 @@
          </div>
 
          <div class="form-actions">
-           <%= f.button :submit, class: "btn btn-flat" %>
+           <%= f.button :submit, class: "btn btn-danger title-new" %>
          </div>
        <% end %>
+</div>
