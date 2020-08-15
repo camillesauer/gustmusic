@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: gustmusic_production
-  username: gustmusic
-  password: <%= ENV['GUSTMUSIC_DATABASE_PASSWORD'] %>
+  database: db3va2tp74cc2l
+  username: hvijwhzwhhavfd
+  password: 131f0115f71a2efa68e1f738ce3230cdbb7419cd02152265448c5f03f3dff182
+  adapter: postgresql
+  host: ec2-34-225-162-157.compute-1.amazonaws.com
+  port: 5432
