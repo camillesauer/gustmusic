@@ -122,7 +122,24 @@ text-align: center !important;
     width: 30px;
 }}
 
+@media (max-width: 320px) {
+.card-video {
+    padding: 0px;
+    margin: 0px;
 
+}}
+
+@media (max-width: 320px) {
+.space {
+    height:20px
+
+}}
+
+@media (min-width: 321px) {
+.space {
+    display:none;
+
+}}
 
 
 
