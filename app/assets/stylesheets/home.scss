@@ -141,7 +141,12 @@ text-align: center !important;
 
 }}
 
-
+@media (min-width: 320px) {
+.ajouter-btn{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+}
 
 @media (min-width: 100px) {
   .mosaic{
